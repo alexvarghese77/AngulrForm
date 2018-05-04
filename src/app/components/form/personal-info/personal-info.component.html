@@ -1,32 +1,38 @@
 <h3>Personal Details</h3>
-<form action="">
+<form  #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value )" novalidate>
     <div class="grid-container">
         <div class="grid-item">
-        <div>First Name</div>
-        <input type="text"></div>
+        <label>First Name</label>
+        <input type="text" name="fname" ngModel></div>
         <div class="grid-item">
-        <div>Middle Name</div>
-        <input type="text"></div>
+        <label>Middle Name</label>
+        <input type="text" name="mname" ngModel></div>
         <div class="grid-item">
-        <div>Last Name</div>
-        <input type="text"></div>
+        <label>Last Name</label>
+        <input type="text" name="lname" ngModel></div>
         <div class="grid-item">
-        <div>DNI/NIE</div>
-        <input type="text"></div>
+        <label>DNI/NIE</label>
+        <input type="text" name="DNI" ngModel></div>
         <div class="grid-item">
-        <div>Date Of Birth</div>
-        <input type="text"></div>
+        <label>Date Of Birth</label>
+        <input type="date" name="dob" ngModel></div>
         <div class="grid-item">
-        <div>Gender</div>
-        <input type="text"></div>
+        <label>Gender</label><br>
+        <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female
+        </div>
         <div class="grid-item">
-        <div>Email</div>
-        <input type="text"></div>
+        <label>Email ID</label>
+        <input type="email" name="email" ngModel></div>
         <div class="grid-item">
-        <div>MobileNo</div>
-        <input type="text"></div>
+        <label>MobileNo</label>
+        <input type="number" name="mobile" ngModel></div>
         <div class="grid-item">
-        <div>Lan Line</div>
-        <input type="text"></div>
+        <label>Lan Line</label>
+        <input type="number" name="lanline" ngModel></div>
+        <div></div>
+        <div></div>
+        <button type="submit" class="btn">Continoue</button>
       </div>
+     
 </form>
