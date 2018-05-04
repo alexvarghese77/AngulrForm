@@ -18,8 +18,24 @@
         <input type="date" name="dob" ngModel></div>
         <div class="grid-item">
         <label>Gender</label><br>
-        <input type="radio" name="gender" value="male" checked> Male
-        <input type="radio" name="gender" value="female"> Female
+        <div class="radioDiv">
+                <div class="radioElement">
+                        <label class="radioContainer">Male
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                              </label>
+                    </div>
+                    <div class="radioElement">
+                            <label class="radioContainer">Female
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                  </label>
+                    </div>
+           
+            
+        </div>
+       
+
         </div>
         <div class="grid-item">
         <label>Email ID</label>
@@ -32,7 +48,7 @@
         <input type="number" name="lanline" ngModel></div>
         <div></div>
         <div></div>
-        <button type="submit" class="btn">Continoue</button>
+        <button type="submit" class="btn">Continue &#8594;</button>
       </div>
      
 </form>
