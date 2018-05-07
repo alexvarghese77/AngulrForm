@@ -1,22 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
+
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
-
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { PersonalInfoComponent } from './components/form/personal-info/personal-info.component';
-import { RangeInputComponent } from './components/rangeSlider/range-input/range-input.component';
-
+import { TabsComponent } from './tabs/tabs.component';
+import { TabComponent } from './tab/tab.component';
+import { MyCashComponent } from './my-cash/my-cash.component';
+import { AmountScaleComponent } from './amount-scale/amount-scale.component';
+import { InfoFormPanelComponent } from './info-form-panel/info-form-panel.component';
+import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import { IncomeInfoComponent } from './income-info/income-info.component';
+import { InvestmentInfoComponent } from './investment-info/investment-info.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    TabsComponent,
+    TabComponent,
+    MyCashComponent,
+    AmountScaleComponent,
+    InfoFormPanelComponent,
     PersonalInfoComponent,
-    RangeInputComponent
+    IncomeInfoComponent,
+    InvestmentInfoComponent,
+    SliderComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

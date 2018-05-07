@@ -1,0 +1,18 @@
+$header-bg-color: #292C31;
+$header-font-color: #ECEFF2;
+$button-bg-color: #03B07A;
+.my-cash-container {
+    header {
+        background-color: $header-bg-color;
+        color: $header-font-color;
+        h2 {
+            font-weight: normal;
+            padding: 40px 20px 40px 20px;
+            margin: 0;
+            font-size: 22px;
+        }
+    }
+    .content {
+        margin-top: 40px;
+    }
+}

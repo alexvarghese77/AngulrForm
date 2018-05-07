@@ -1,0 +1,16 @@
+$light-gray: #F2F6F7;
+.amount-scale-container {
+    display: flex;
+    .spacer {
+        flex: 2;
+    }
+    section {
+        flex: 6;
+        background-color: $light-gray;
+        border-radius: 4px;
+        display: flex;
+        slider {
+            flex: 1;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+<div class="personal-info-container">
+    <h3>Personal Info</h3>
+    <hr>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value )" novalidate>
+        <div class="formContainer">
+
+        </div>
+        <div class="grid-container">
+            <div class="grid-item">
+                <label>First Name</label>
+                <input type="text" #refFname formControlName="fname" >
+                <div *ngIf="userForm.controls['fname'].hasError('required') && userForm.controls['fname'].touched" class="error">
+                    Please Enter a valid First Name
+                </div>
+            </div>
+            <div class="grid-item">
+                <label>Middle Name</label>
+                <input type="text" formControlName="mname" >
+            </div>
+            <div class="grid-item">
+                <label>Last Name</label>
+                <input type="text" formControlName="lname"  >
+                <div *ngIf="userForm.controls['lname'].hasError('required') && userForm.controls['lname'].touched" class="error">
+                        Please Enter a valid Last Name
+                    </div>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item">
+                <label>DNI/NIE</label>
+                <input type="text" formControlName="dni"  ></div>
+                <div class="grid-item">
+                <label>Date Of Birth</label>
+                <input type="date" formControlName="dob"  ></div>
+                <div class="grid-item">
+                <label>Gender</label><br>
+                <div class="radioDiv">
+                        <div class="radioElement">
+                                <label class="radioContainer">Male
+                                        <input type="radio" checked="checked" formControlName="gender">
+                                        <span class="checkmark"></span>
+                                      </label>
+                            </div>
+                            <div class="radioElement">
+                                    <label class="radioContainer">Female
+                                            <input type="radio" formControlName="gender">
+                                            <span class="checkmark"></span>
+                                          </label>
+                            </div>
+                </div>
+                </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item">
+                <label>Email ID</label>
+                <input type="email" formControlName="email"  >
+                <div *ngIf="userForm.controls['email'].hasError('required') && userForm.controls['email'].touched" class="error">
+                       Email should not empty 
+                    </div>
+                <div *ngIf="userForm.controls['email'].hasError('pattern') && userForm.controls['email'].touched" class="error">
+                      Please enter a valid Email id
+                    </div>
+            </div>
+                <div class="grid-item">
+                <label>MobileNo</label>
+                <input type="number" formControlName="mobile"  ></div>
+                <div class="grid-item">
+                <label>Lan Line</label>
+                <input type="number" formControlName="lanline"  ></div>
+        
+        </div>
+
+
+        <button (click)="continue()">
+            Continue
+        </button>
+    
+     
+</form>  
+</div>
